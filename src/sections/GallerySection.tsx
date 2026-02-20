@@ -15,20 +15,22 @@ interface Photo {
   caption: string;
 }
 
+const base = import.meta.env.BASE_URL;
+
 const photos: Photo[] = [
-  { src: './photos/casal1.jpg', alt: 'Momento especial', caption: 'Juntos em cada celebração' },
-  { src: './photos/casal2.jpg', alt: 'Olhar de amor', caption: 'Seus olhos são meu lar' },
-  { src: './photos/ela1.jpg', alt: 'Jantar romântico', caption: 'Momentos especiais a dois' },
-  { src: './photos/ela2.jpg', alt: 'Sorriso lindo', caption: 'Seu sorriso ilumina meu dia' },
-  { src: './photos/ela3.jpg', alt: 'Pose perfeita', caption: 'A mulher da minha vida' },
-  { src: './photos/ela4.jpg', alt: 'Selfie', caption: 'Linda em cada ângulo' },
-  { src: './photos/ela5.jpg', alt: 'Momento doce', caption: 'Doce como você' },
-  { src: './photos/casal3.jpg', alt: 'Espelho', caption: 'Nós dois, sempre' },
-  { src: './photos/casal4.jpg', alt: 'Close', caption: 'Amor em cada detalhe' },
-  { src: './photos/casal5.jpg', alt: 'Abraço', caption: 'Seu abraço é meu refúgio' },
-  { src: './photos/casal6.jpg', alt: 'Casal casual', caption: 'Perfeitos juntos' },
-  { src: './photos/casal7.jpg', alt: 'Praia', caption: 'Verão ao seu lado' },
-  { src: './photos/casal8.jpg', alt: 'Ternura', caption: 'Meu amor eterno' },
+  { src: `${base}photos/casal1.jpg`, alt: 'Momento especial', caption: 'Juntos em cada celebração' },
+  { src: `${base}photos/casal2.jpg`, alt: 'Olhar de amor', caption: 'Seus olhos são meu lar' },
+  { src: `${base}photos/ela1.jpg`, alt: 'Jantar romântico', caption: 'Momentos especiais a dois' },
+  { src: `${base}photos/ela2.jpg`, alt: 'Sorriso lindo', caption: 'Seu sorriso ilumina meu dia' },
+  { src: `${base}photos/ela3.jpg`, alt: 'Pose perfeita', caption: 'A mulher da minha vida' },
+  { src: `${base}photos/ela4.jpg`, alt: 'Selfie', caption: 'Linda em cada ângulo' },
+  { src: `${base}photos/ela5.jpg`, alt: 'Momento doce', caption: 'Doce como você' },
+  { src: `${base}photos/casal3.jpg`, alt: 'Espelho', caption: 'Nós dois, sempre' },
+  { src: `${base}photos/casal4.jpg`, alt: 'Close', caption: 'Amor em cada detalhe' },
+  { src: `${base}photos/casal5.jpg`, alt: 'Abraço', caption: 'Seu abraço é meu refúgio' },
+  { src: `${base}photos/casal6.jpg`, alt: 'Casal casual', caption: 'Perfeitos juntos' },
+  { src: `${base}photos/casal7.jpg`, alt: 'Praia', caption: 'Verão ao seu lado' },
+  { src: `${base}photos/casal8.jpg`, alt: 'Ternura', caption: 'Meu amor eterno' },
 ];
 
 const GallerySection = () => {

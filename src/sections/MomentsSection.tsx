@@ -23,6 +23,8 @@ interface MomentCategory {
   photos: MomentPhoto[];
 }
 
+const base = import.meta.env.BASE_URL;
+
 const momentCategories: MomentCategory[] = [
   {
     title: 'Jantares Românticos',
@@ -31,8 +33,8 @@ const momentCategories: MomentCategory[] = [
     color: 'from-romantic-pink to-romantic-deep',
     bgImage: 'linear-gradient(135deg, rgba(255,182,193,0.9) 0%, rgba(255,105,180,0.9) 100%)',
     photos: [
-      { src: './photos/casal1.jpg', caption: 'Nosso jantar especial' },
-      { src: './photos/casal2.jpg', caption: 'Sempre juntos à mesa' },
+      { src: `${base}photos/casal1.jpg`, caption: 'Nosso jantar especial' },
+      { src: `${base}photos/casal2.jpg`, caption: 'Sempre juntos à mesa' },
     ],
   },
   {
@@ -42,8 +44,8 @@ const momentCategories: MomentCategory[] = [
     color: 'from-purple-400 to-pink-500',
     bgImage: 'linear-gradient(135deg, rgba(167,139,250,0.9) 0%, rgba(236,72,153,0.9) 100%)',
     photos: [
-      { src: './photos/casal3.jpg', caption: 'Comemorando juntos' },
-      { src: './photos/casal4.jpg', caption: 'Sempre celebrando o amor' },
+      { src: `${base}photos/casal3.jpg`, caption: 'Comemorando juntos' },
+      { src: `${base}photos/casal4.jpg`, caption: 'Sempre celebrando o amor' },
     ],
   },
   {
@@ -53,8 +55,8 @@ const momentCategories: MomentCategory[] = [
     color: 'from-blue-400 to-cyan-500',
     bgImage: 'linear-gradient(135deg, rgba(96,165,250,0.9) 0%, rgba(6,182,212,0.9) 100%)',
     photos: [
-      { src: './photos/casal5.jpg', caption: 'Aventureiros de coração' },
-      { src: './photos/casal7.jpg', caption: 'Explorando o mundo juntos' },
+      { src: `${base}photos/casal5.jpg`, caption: 'Aventureiros de coração' },
+      { src: `${base}photos/casal7.jpg`, caption: 'Explorando o mundo juntos' },
     ],
   },
   {
@@ -64,8 +66,8 @@ const momentCategories: MomentCategory[] = [
     color: 'from-yellow-400 to-orange-500',
     bgImage: 'linear-gradient(135deg, rgba(250,204,21,0.9) 0%, rgba(249,115,22,0.9) 100%)',
     photos: [
-      { src: './photos/casal6.jpg', caption: 'Risadas garantidas' },
-      { src: './photos/casal8.jpg', caption: 'Aquele sorriso que amo' },
+      { src: `${base}photos/casal6.jpg`, caption: 'Risadas garantidas' },
+      { src: `${base}photos/casal8.jpg`, caption: 'Aquele sorriso que amo' },
     ],
   },
 ];
