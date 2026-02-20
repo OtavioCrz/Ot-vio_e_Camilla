@@ -3,6 +3,7 @@ node_modules/
 
 # Build output
 dist/
+# docs/ is the GitHub Pages deploy folder — do NOT ignore it
 
 # Editor
 .vscode/

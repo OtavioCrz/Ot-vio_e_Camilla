@@ -6,6 +6,9 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/Ot-vio_e_Camilla/',
+  build: {
+    outDir: 'docs',
+  },
   plugins: [inspectAttr(), react()],
   resolve: {
     alias: {
