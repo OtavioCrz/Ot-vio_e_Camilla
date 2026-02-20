@@ -106,7 +106,7 @@ const HeroSection = () => {
       }}
     >
       {/* Background Effects */}
-      <FloatingHearts count={8} color="#FFB6C1" minSize={8} maxSize={20} speed={1.1} />
+      <FloatingHearts count={20} minSize={12} maxSize={28} speed={1} />
       <StarField count={12} color="#FFD700" />
       
       {/* Decorative circles */}
