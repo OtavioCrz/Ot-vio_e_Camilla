@@ -1,0 +1,208 @@
+/* App-specific styles */
+
+/* Section transitions */
+section {
+  position: relative;
+}
+
+/* Photo card hover effects */
+.photo-card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.photo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 182, 193, 0.1) 0%,
+    rgba(255, 105, 180, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.photo-card:hover::before {
+  opacity: 1;
+}
+
+/* Timeline card enhancements */
+.timeline-card {
+  perspective: 1000px;
+}
+
+.timeline-icon {
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover .timeline-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.7);
+}
+
+/* Moment card 3D effect */
+.moment-card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.moment-card:hover {
+  transform: translateY(-5px) rotateX(5deg);
+}
+
+/* Dream item checkbox animation */
+.dream-checkbox {
+  transition: all 0.3s ease;
+}
+
+.dream-item:hover .dream-checkbox {
+  transform: scale(1.1);
+}
+
+/* Glass morphism enhancement */
+.glass-romantic {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(255, 105, 180, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Text gradient animation */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.text-gradient-romantic {
+  background: linear-gradient(
+    135deg,
+    #C71585 0%,
+    #FF69B4 25%,
+    #FFB6C1 50%,
+    #FF69B4 75%,
+    #C71585 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 5s ease infinite;
+}
+
+/* Heart beat variations */
+@keyframes heartBeatSlow {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.05); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.05); }
+}
+
+.animate-heart-beat-slow {
+  animation: heartBeatSlow 2s ease-in-out infinite;
+}
+
+/* Floating animation variations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Glow pulse */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.8);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF0F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FFB6C1 0%, #FF69B4 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FF69B4 0%, #C71585 100%);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(255, 105, 180, 0.3);
+  color: #C71585;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #FF69B4;
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .text-gradient-romantic {
+    animation: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .section-fullscreen {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+  
+  .glass-romantic {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Print styles */
+@media print {
+  .section-fullscreen {
+    min-height: auto;
+    page-break-inside: avoid;
+  }
+  
+  main {
+    opacity: 1 !important;
+  }
+}
